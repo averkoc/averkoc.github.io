@@ -11,9 +11,9 @@
         return;
       }
       if (hash1 === hash2) {
-        document.getElementById("result").innerHTML = "The hashes match!";
+        document.getElementById("result").innerHTML = "<span style='color:green'><b>Hashes match!</b></span>";
       } else {
-        document.getElementById("result").innerHTML = "The hashes do not match.";
+        document.getElementById("result").innerHTML = "<span style='color:red'>Don't match!</span>";
       }
     }
 
@@ -42,6 +42,6 @@
   <button onclick="compareHashes()">Compare Hashes</button>
   <p id="result"></p>
   <br />
-  <p>You can calculate sha-256 hash for a file in windows by using powershell and giving the command: <b>get-filehash filename.</b><br>To select the calculated hash just double-click it and then copy/paste it to hash2 textbox. <br><br> Note: Powershell is started from cmd prompt by typing powershell or just like any other program from start-menu</p>
+  <p>You can calculate sha-256 hash for a file in windows by using powershell and giving the command: <b>get-filehash filename.</b><br>Copy the calculated has and paste it to hash2 textbox. <br><br> Note: Powershell is started from cmd prompt by typing powershell or just like any other program from start-menu</p>
 </body>
 </html>
