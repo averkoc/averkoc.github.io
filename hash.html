@@ -2,6 +2,13 @@
 <html>
 <head>
   <title>hash-comparisons</title>
+  <style>
+  input[type="text"]
+	{
+    font-size:18px;
+	font-family:'Lucida Console', monospace";
+	}
+  </style>	
   <script>
     function compareHashes() {
       const hash1 = document.getElementById("hash1").value;
@@ -10,7 +17,7 @@
         document.getElementById("result").innerHTML = "Please enter both hashes to compare.";
         return;
       }
-      if (hash1 === hash2) {
+      if (hash1.toLowerCase() === hash2.toLowerCase()) {
         document.getElementById("result").innerHTML = "<span style='color:green'><b>Hashes match!</b></span>";
       } else {
         document.getElementById("result").innerHTML = "<span style='color:red'>Don't match!</span>";
@@ -31,11 +38,11 @@
     
   </ul>
   <label for="hash1">Hash 1:</label>
-  <input type="text" id="hash1" size="80" />
+  <input type="text" style="text-transform: lowercase" id="hash1" size="80" />
   <br />
   <p>Paste the hash that you calculated to hash2</p>
   <label for="hash2">Hash 2:</label>
-  <input type="text" id="hash2" size="80" />
+  <input type="text" style="text-transform: lowercase" id="hash2" size="80" />
   <br />
   <br />
   <br />
