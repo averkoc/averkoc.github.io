@@ -16,6 +16,21 @@
 	text-transform: lowercase;
 	
 	}
+ button {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.result {
+  font-size: 1.5rem;
+}
+
+ 
   </style>	
   <script>
     function compareHashes() {
@@ -26,9 +41,12 @@
         return;
       }
       if (hash1.toLowerCase() === hash2.toLowerCase()) {
-        document.getElementById("result").innerHTML = "<span style='color:green'><b>Hashes match!</b></span>";
+        document.getElementById("check").innerHTML = "Hashes match!";
+		document.getElementById("check").style.background="green"
+
       } else {
-        document.getElementById("result").innerHTML = "<span style='color:red'>Don't match!</span>";
+        document.getElementById("check").innerHTML = "Hashes don't match!";
+		document.getElementById("check").style.background="red"
       }
     }
 
@@ -54,8 +72,8 @@
   <br />
   <br />
   <br />
-  <button onclick="compareHashes()">Compare Hashes</button>
-  <p id="result"></p>
+  <button id="check" onclick="compareHashes()">Click to compare Hashes</button>
+  <p class="result" id="result"></p>
   <br />
   <p>You can calculate sha-256 hash for a file in windows by using powershell and giving the command: <b>get-filehash filename.</b><br>Copy the calculated hash and paste it to hash2 textbox. <br><br> Note: Powershell is started from cmd prompt by typing powershell or just like any other program from start-menu</p>
 </body>
