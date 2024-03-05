@@ -5,7 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
     <style>
-        /* Add any custom styling here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        #outputDiv {
+            font-weight: bold;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -13,9 +57,9 @@
     <p>Please enter your grade for each section:</p>
     <table>
         <tr>
-            <td>Type</td>
-            <td>Weight</td>
-            <td>Grade</td>
+            <th>Type</th>
+            <th>Weight</th>
+            <th>Grade</th>
         </tr>
         <tr>
             <td>MC Grade</td>
