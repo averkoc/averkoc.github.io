@@ -93,9 +93,9 @@
 
             let finalGrade;
             if (exerciseDone) {
-                finalGrade = Math.round(0.4 * mcGrade + 0.6 * ptGrade);
+                finalGrade = Math.round(0.6 * mcGrade + 0.4 * ptGrade);
             } else {
-                finalGrade = 0.4 * mcGrade + 0.6 * ptGrade;
+                finalGrade = Math.floor(0.6 * mcGrade + 0.4 * ptGrade);
             }
 
             document.getElementById('outputDiv').textContent = `Final Grade: ${finalGrade}`;
